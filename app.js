@@ -103,6 +103,8 @@ function initSettings (args) {
     
     // languages
     args.langs = (function () {
+		if( args.lang ) return { "en": args.lang };
+		
         var dpath = path.join(__dirname, 'config/lang'),
             files = fs.readdirSync(dpath),
             langs = {};
@@ -296,6 +298,9 @@ if (require.main === module) {
         args.settings = require(path.join(args.dpath, 'settings.json'));
         args.custom = require(path.join(args.dpath, 'custom.json'));
         args.users = require(path.join(args.dpath, 'users.json'));
+		try {
+			args.lang = require(path.join(args.dpath, 'en.json'));
+		} catch(e) {}
 
         initDatabase(args, function (err) {
             if (err) return console.log(err.message.red);
