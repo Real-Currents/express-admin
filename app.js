@@ -136,12 +136,19 @@ function initSettings (args) {
         if (fpath) break;
     }
     var events = fpath ? require(fpath) : {};
+	
     if (!events.hasOwnProperty('preSave'))
         events.preSave = function (req, res, args, next) {next()};
     if (!events.hasOwnProperty('postSave'))
         events.postSave = function (req, res, args, next) {next()};
     if (!events.hasOwnProperty('preList'))
         events.preList = function (req, res, args, next) {next()};
+	
+    if (!events.hasOwnProperty('preDelete'))
+        events.preSave = function (req, res, args, next) {next()};
+    if (!events.hasOwnProperty('postDelete'))
+        events.postSave = function (req, res, args, next) {next()};
+	
     args.events = events;
 
 
