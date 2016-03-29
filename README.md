@@ -1,13 +1,13 @@
 
-![img-screenshot]
+![img-screenshot](http://i.imgur.com/6wFggqg.png)
 
 ---
 
-[![img-npm-install]][url-npm]
+[![img-npm-install](https://nodei.co/npm/express-admin.png?mini=true)][url-npm]
 
-[![img-npm-version]][url-npm]
-[![img-npm-downloads]][url-npm]
-[![img-travis]][url-travis]
+[![img-npm-version](http://img.shields.io/npm/v/express-admin.svg?style=flat-square)][url-npm]
+[![img-npm-downloads](http://img.shields.io/npm/dm/express-admin.svg?style=flat-square)][url-npm]
+[![img-travis](http://img.shields.io/travis/simov/express-admin.svg?style=flat-square)][url-travis]
 
 
 # [Introductory Screencast][url-screencast]
